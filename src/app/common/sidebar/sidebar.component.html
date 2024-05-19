@@ -1,0 +1,69 @@
+<div
+    class="sidebar-area bg-white transition"
+    [ngClass]="{'active': isToggled}"
+>
+    <div class="logo bg-white">
+        <a routerLink="/" class="d-flex align-items-center">
+            <img src="assets/images/logo-icon.svg" alt="logo-icon">
+            <span class="fw-extrabold">
+                Trinta
+            </span>
+        </a>
+    </div>
+    <div
+        class="burger-menu transition cursor-pointer"
+        [ngClass]="{'active': isToggled}"
+        (click)="toggle()"
+    >
+        <span class="top-bar transition bg-dark d-block"></span>
+        <span class="middle-bar transition bg-dark d-block"></span>
+        <span class="bottom-bar transition bg-dark d-block"></span>
+    </div>
+    <ng-scrollbar visibility="hover">
+        <div class="sidebar-inner">
+            <div class="sidebar-menu">
+                <mat-accordion>
+                    <span class="sub-title text-body">
+                        MAIN
+                    </span>
+                    <a routerLink="/" class="sidebar-menu-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        <i-feather name="grid"></i-feather>
+                        <span class="title">
+                            Dashboard
+                        </span>
+                    </a>
+                    <a class="sidebar-menu-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        <i-feather name="layers"></i-feather>
+                        <span class="title">
+                            Super Admin
+                        </span>
+                    </a>
+                    <span class="sub-title text-body">
+                        Saloon
+                    </span>
+                    <a class="sidebar-menu-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        <i-feather name="file-text"></i-feather>
+                        <span class="title">
+                            Saloon
+                        </span>
+                    </a>
+                    <a class="sidebar-menu-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        <i-feather name="users"></i-feather>
+                        <span class="title">
+                            My Employee
+                        </span>
+                    </a>
+                    <span class="sub-title text-body">
+                        Customer
+                    </span>
+                    <a class="sidebar-menu-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        <i-feather name="share-2"></i-feather>
+                        <span class="title">
+                            Social Feed
+                        </span>
+                    </a>
+                </mat-accordion>
+            </div>
+        </div>
+    </ng-scrollbar>
+</div>
